@@ -58,4 +58,4 @@ libro_destacado["disponible:"] = False
 # Imprimimos toda la información actualizada del libro destacado
 print("Libro destacado (Info Actualizada):")
 for clave, valor in libro_destacado.items():    
-    print(clave, valor)  # Imprimimos cada par clave:valor del diccionario
+    print(clave, valor)  # imprimimos cada par clave:valor del diccionario
