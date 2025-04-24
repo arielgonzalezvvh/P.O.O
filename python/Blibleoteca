@@ -1,0 +1,61 @@
+# -*- coding: utf-8 -*-
+# Ariel González - 24/04/2025
+# Tipos de variables
+
+# Asignamos el nombre de la biblioteca a una variable tipo string
+nombre_Biblioteca = "Bilbioteca Escolar Vate"
+
+# Asignamos la capacidad máxima de la biblioteca (número de personas o libros) como un número entero
+capacidad_maxima = 1600
+
+# Asignamos la cantidad actual de libros disponibles en la biblioteca
+libros_disponibles = 1300
+
+# Creamos un diccionario con los datos del libro destacado del mes
+libro_destacado = {
+    "título:": "La sombra del viento", # Título del libro
+    "autor:": "Carlos Ruiz Zafón",     # Autor del libro
+    "año:": 2001,                      # Año de publicación
+    "género:": "Novela/Misterio",      # Género literario
+    "disponible:": True                # Disponibilidad (True significa que está disponible)
+}
+
+# Creamos una lista con las categorías de libros que hay en la biblioteca
+categorias = ["misterio", "fantasía", "romance ", "tragedia", "Matemáticas"]
+
+# Creamos una tupla que representa el horario de atención: (hora de apertura, hora de cierre)
+horario = (8, 18)  # Se entiende que es de 8:00 a 18:00 horas
+
+# Creamos un conjunto (set) que contiene los RUT (identificadores) de estudiantes con préstamos activos
+Estudiantes_con_prestamos = {12345678, 23456789, 34567890}
+
+# Actividad
+# 1 ---------------------------------------------------------------------------
+# Imprimimos el nombre de la biblioteca
+print(nombre_Biblioteca)
+
+# 2 ---------------------------------------------------------------------------
+# Calculamos cuántos libros se podrían agregar hasta llegar a la capacidad máxima e imprimimos el resultado
+print(f"Libros restantes para la capacidad máxima: {capacidad_maxima - libros_disponibles}")
+
+# 3 ---------------------------------------------------------------------------
+# Agregamos una nueva categoría llamada 'Programación' a la lista de categorías
+categorias.append('Programación')
+
+# 4 ---------------------------------------------------------------------------
+# Imprimimos el horario de apertura y cierre utilizando los valores de la tupla
+print(f"Hora de apertura: {horario[0]}\nHora de cierre: {horario[1]}")
+
+# 5 ---------------------------------------------------------------------------
+# Agregamos un nuevo RUT de estudiante con préstamo activo al conjunto
+Estudiantes_con_prestamos.add("12208919")
+
+# 6 ---------------------------------------------------------------------------
+# Actualizamos la disponibilidad del libro destacado a False (ahora no está disponible)
+libro_destacado["disponible:"] = False
+
+# 7 ---------------------------------------------------------------------------
+# Imprimimos toda la información actualizada del libro destacado
+print("Libro destacado (Info Actualizada):")
+for clave, valor in libro_destacado.items():    
+    print(clave, valor)  # Imprimimos cada par clave:valor del diccionario
