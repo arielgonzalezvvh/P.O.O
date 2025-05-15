@@ -1,0 +1,126 @@
+def comparar_entero(): # la creacion de la variable comparar_enteros
+    try:
+        #
+        numero = int(input("Ingresa un número entero: ")) # aqui creamos un campo para que cada vez que se ejecute la funcion antes de todo nos  de un string antes de poner un número
+        
+        # Compara el número con 10
+        if numero > 10: # si el número que pongamos es mayor a 10  
+            print("El número es mayor que 10.") # este número se va imprimir y nos indicara que el número es mayor a 10
+        elif numero < 10: # evalúa si el valor de la variable numero es menor que 10 solo si la condición anterior no se cumplió.
+            print("El número es menor que 10.") # imprime el número  y nos indica que es menor que 10
+        else: # este se ejecuta si ninguna de las condiciones no se cumplio 
+            print("El número es igual a 10.") # nos imprime que  pusimos 10 y es igual que 10 
+    
+    
+    except ValueError:    
+        # Esta línea maneja la excepción ValueError, que ocurre cuando se intenta convertir
+        # una entrada no numérica (como letras o símbolos) a un número entero y falla.
+        
+        # Captura si el usuario ingresa un valor no numérico
+        print("Error: Debes ingresar un número entero válido.")
+        # Imprime un mensaje de error indicando al usuario que debe ingresar un número entero válido.
+
+                
+        
+
+
+# Aquí llamas la función
+comparar_entero()
+
+
+2 EJERCICIO:
+
+def comparar_decimal(): # la creacion de la variable comparar_decimal
+    try:
+   
+        numero = float(input("Ingresa un número con decimales: ")) # el string que debemos poner lo convertimos en numero decimal gracias al parsefloat 
+        
+        # todas estas lineas de codigo funcionan igual que el primero,  comparan si el decimal es mayor que 10, igual que 10 y si es menor que 10
+        if numero > 10:
+            print("El número es mayor que 10.")
+        elif numero < 10:
+            print("El número es menor que 10.")
+        else:
+            print("El número es igual a 10.")
+    
+    
+    except ValueError:  # Esta línea maneja la excepción ValueError, que ocurre cuando se intenta convertir una entrada no numérica (como letras o símbolos) a un número entero y falla.
+
+        # nos indica si el usuario ingresa un valor no numérico
+        print("Error: Debes ingresar un número decimal válido.")
+
+
+# Aquí llamas la función
+comparar_decimal()
+
+
+
+Ejercico 3:
+
+def area_triangulo():  # declaramos la variable area_trinagulo
+    try:
+        # indicamos que el usuario coloque un numero para poder calcular la base del triangulo
+        base = int(input("Ingresa la base del triángulo (entero): "))
+        
+        # solicitamos que el usuario le de un valo a la altura del triangulo
+        altura = int(input("Ingresa la altura del triángulo (entero): "))
+        
+        # aqui nos indica que queremos que se ejecuta la sigiente operacion de calculo del área usando la fórmula base * altura / 2
+        area = base * altura / 2
+        
+        # imprimimos el resultado de la operacion para tener el area del trinagulo 
+        print(f"El área del triángulo es: {area}")
+    except ValueError:
+        # Captura si el usuario no ingresa números enteros válidos
+        print("Error: Debes ingresar valores enteros válidos.")
+
+
+Ejercico 4:
+
+
+def saludo_personalizado(): # declaramos la variable de saludar 
+    # solicitamos que el usuario ponga un nombre para poder enviar el saludo
+    nombre = input("Ingresa tu nombre: ")
+    
+    try:
+        # Solicita la edad del usuario
+        edad = int(input("Ingresa tu edad: "))
+        
+        # imprimos el saludo llamando al string , agregando mas texto
+        print(f"Hola, {nombre}. Me alegra que tengas {edad} años.")
+    except ValueError:
+        # Captura si la edad no es un número entero válido
+        print("Error: Debes ingresar un número entero para la edad.")
+
+
+
+Ejercico 5:
+
+def suma_numeros():  #  declaramos la variable suma_numeros
+    try:
+        # Solicita cuántos números quiere ingresar el usuario
+        cantidad = int(input("¿Cuántos números quieres sumar?: "))
+        
+        # Inicializa una lista vacía para almacenar los números
+        numeros = []
+
+        # Usa un bucle for para pedir los números
+        for i in range(cantidad):
+            numero = float(input(f"Ingrese el número {i+1}: "))
+            numeros.append(numero)  # Agrega cada número a la lista
+
+        # Calcula la suma de los números usando sum()
+        total = sum(numeros)
+        
+        # Muestra el resultado
+        print(f"La suma total es: {total}")
+    except ValueError:
+        # Captura errores si se ingresan datos no válidos
+        print("Error: Debes ingresar solo números.")
+
+
+
+
+
+
+
